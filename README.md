@@ -18,7 +18,7 @@ $./pipeStructure.py [-h] -i file -k int [-o prefix] [-j int] [-r int] [--burnin 
 - The script assumes that your input file for STRUCTURE includes population data.
 - Is you have only samples, you need to modify the script.
 
-**-k/--max_k**  Integer assigning the maximum number of K to be evaluated. \
+**-k/--max_k**  Integer assigning the maximum number of K to be evaluated.
 
 ### Optional
 **-h/--help**  Show this help message and exit.
