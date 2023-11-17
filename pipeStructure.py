@@ -178,7 +178,7 @@ def get_arguments():
         metavar="int",
         required=True,
         type=int,
-        help="Interger assigning the maximum number of K to be evaluated.",
+        help="Integer assigning the maximum number of K to be evaluated.",
     )
     parser.add_argument(
         "-o",
@@ -195,7 +195,7 @@ def get_arguments():
         metavar="int",
         default=10,
         type=int,
-        help="Interger assigning  number of nodes to spawn simultaneous processes (parallel); defaul is 10.",
+        help="Integer assigning the number of nodes to spawn simultaneous processes (parallel); default is 10.",
     )
     parser.add_argument(
         "-r",
@@ -204,7 +204,7 @@ def get_arguments():
         metavar="int",
         default=50,
         type=int,
-        help="Interger assigning number of replicates for each k; default is 50.",
+        help="Integer assigning the number of replicates for each k; default is 50.",
     )
     parser.add_argument(
         "--burnin",
@@ -212,7 +212,7 @@ def get_arguments():
         metavar="int",
         default=50000,
         type=int,
-        help="Interger specifying the length of burnin period before the start of data collection by STRUCTURE; default is 50000.",
+        help="Integer specifying the length of burnin period before the start of data collection by STRUCTURE; default is 50000.",
     )
     parser.add_argument(
         "--numreps",
@@ -220,7 +220,7 @@ def get_arguments():
         metavar="int",
         default=25000,
         type=int,
-        help="Interger specifying the number of MCMC reps after burnin by STRUCTURE; default is 25000.",
+        help="Integer specifying the number of MCMC reps after burnin by STRUCTURE; default is 25000.",
     )
     args = parser.parse_args()
 
