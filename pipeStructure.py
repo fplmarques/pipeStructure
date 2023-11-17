@@ -24,18 +24,19 @@ from pdb import run
 
 def get_file_stats(input_str_file: str) -> (int, int):
     """
-    Get number of terminals and number of loci from input file.
-    This is require to configure command line for Structure
+    Get the number of terminals and the number of loci from the input file.
+    This is required to configure the command line for Structure
     """
 
     with open(input_str_file, "r") as file:
-        # Get number of lines
+        # Get the number of lines
         num_terminals = int(sum(1 for line in file) / 2)
 
-        # Reset file pointer to beginning of file
+        # Reset file pointer to the beginning of file
         file.seek(0)
 
-        # Get number of numbers separated by spaces or tabs in first line
+        # Get the number of loci by examining the first line and deleting the first 2 characters
+        # It assumes that you are running Structure with sample and population data
         first_line = file.readline().strip()
         number_of_loci = len(first_line.split()) - 2
 
@@ -45,13 +46,13 @@ def get_file_stats(input_str_file: str) -> (int, int):
 def generate_extraparams_file(n: int) -> None:
     """
     Generate extraparams file for STRUCTURE run
-    This is numbered to contron parallel spawning of processes
+    This is numbered to control parallel spawning of processes
     It also generates a SEED for each extraparams file
     You consider tailoring this function to your needs as it was
-    designed to accomodate population data for Kestimator.
+    designed to accommodate population data for Kestimator.
     """
 
-    # Generate random 9-digit number for seed
+    # Generate a random 9-digit number for seed
     seed = random.randint(100000000, 999999999)
 
     # Define struct_extraparams of output file
@@ -110,7 +111,7 @@ def generate_mainparams_file(burnin=50000, n_reps=25000) -> None:
     Generate mainparams file for STRUCTURE run
     The only parameters that this function controls are burnin and n_reps
     You consider tailoring this function to your needs as it was
-    designed to accomodate population data for Kestimator.
+    designed to accommodate population data for Kestimator.
     """
     # Define struct_extraparams of output file
     struct_mainparams = f"""#define BURNIN         {burnin}                  //
@@ -158,9 +159,9 @@ def get_arguments():
     # Parse command line arguments
     parser = argparse.ArgumentParser(
         description="""This script automates STRUCTURE by parallelizing multiple runs.
-                       The script requires STRUCTURE to be installed and available in the PATH.
-                       You should inspect STRUCTURE's the setting for the functions that write
-                       mainparams.txt and extraparams.txt files to accomodate your needs."""
+                       The script requires STRUCTURE to be installed and available in the PATH. 
+                       You should inspect STRUCTURE's settings for the functions that write
+                       mainparams.txt and extraparams.txt files to accommodate your needs."""
     )
     parser.add_argument(
         "-i",
