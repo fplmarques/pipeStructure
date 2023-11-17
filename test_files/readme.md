@@ -38,3 +38,11 @@ Calculating average values for each group in each file...
 
 Done!
 ```
+
+The script created the following:
+- Four files containing the aligned q_matrices for each K value: K1.tsv, K2.tsv, K3.tsv, and K4.tsv.
+- Four files summarizing the results by averaging the assignment for each sample: K1_average.tsv, K2_average.tsv, K3_average.tsv, and K4_average.tsv.
+
+
+
+
