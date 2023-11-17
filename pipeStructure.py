@@ -184,9 +184,9 @@ def get_arguments():
         "-o",
         "--output_prefix",
         dest="output_prefix",
-        metavar="prefix",
+        metavar="string",
         default=None,
-        help="Prefix for STRUCTURE output files. Uses input file name if not specified.",
+        help="String that specifies the prefix for STRUCTURE output files. Uses input file name if not specified.",
     )
     parser.add_argument(
         "-j",
