@@ -1,5 +1,5 @@
 # Test files
-## Command line associated with files:
+## Command lines associated with the files in the directory:
 ### Running _pipeStructure.py_:
 
 ```bash
