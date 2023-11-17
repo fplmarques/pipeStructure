@@ -29,6 +29,8 @@ $./pipeStructure.py [-h] -i file -k int [-o prefix] [-j int] [-r int] [--burnin 
 
 **-r/--str_rep** Integer assigning the number of replicates for each k; default is 50.
 
-**--burnin **  Integer specifying the length of the burnin period before the start of data collection by STRUCTURE; default is 50000.
+**--burnin**  Integer specifying the length of the burnin period before the start of data collection by STRUCTURE; default is 50000.
 
 **--numreps** Interger specifying the number of MCMC reps after burnin by STRUCTURE; default is 25000.
+
+
