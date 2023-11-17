@@ -1,6 +1,6 @@
 # Test files
 ## Command lines associated with the files in the directory:
-### Running _pipeStructure.py_:
+### 1. Running _pipeStructure.py_
 
 ```bash
 ./pipeStructure.py -i test_structure.str -k 4 -o test -j 5 -r 10 --burnin 500 --numreps 500
