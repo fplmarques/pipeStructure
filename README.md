@@ -14,7 +14,10 @@ $./pipeStructure.py [-h] -i file -k int [-o prefix] [-j int] [-r int] [--burnin 
 
 ## Required arguments:
 
-  -h, --help            show this help message and exit
+**-h/--help**  Show this help message and exit.
+**-i/--input**  Name of the structure input file (*.str, see below for details)
+
+  
   -i file, --input file
                         Name of the structure input file (*.str).
   -k int, --max_k int   Integer assigning the maximum number of K to be evaluated.
