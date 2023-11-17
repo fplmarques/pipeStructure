@@ -55,6 +55,4 @@ $./Rscript popbarplorR -i <input_file>
 
 ![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k2_barplot.png)
 
----
-
 See test files documentation for more information [here](https://github.com/fplmarques/pipeStructure/blob/main/test_files/readme.md)
