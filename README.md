@@ -53,6 +53,6 @@ $./Rscript popbarplorR -i <input_file>
 ## Example of plot:
 
 
-
+![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k2_barplot.png)
 
 
