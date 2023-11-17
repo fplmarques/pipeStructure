@@ -14,7 +14,7 @@ $./pipeStructure.py -i test_structure.str -k 4 -o test -j 5 -r 10 --burnin 500 -
 
 As a result, 80 files were produced: 4 values of K x 10 replicates per k x 2 standard STRUCTURE outputs (*_f and *_q).
 
-### 1. Running _sumStructure.py_
+### 2. Running _sumStructure.py_
 - This script is used to summarize the results of the previous section.
 
 ```bash
