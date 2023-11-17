@@ -21,9 +21,8 @@ $./pipeStructure.py [-h] -i file -k int [-o prefix] [-j int] [-r int] [--burnin 
 - Is you have only samples, you need to modify the script.
 
 **-k/--max_k**  Integer assigning the maximum number of K to be evaluated. \
-  
-  -o prefix, --output_prefix prefix
-                        Prefix for STRUCTURE output files. Uses input file name if not specified.
+
+**-o/--prefix** String that specifies the prefix for STRUCTURE output files. Uses input file name if not specified.
   -j int, --n_jobs int  Integer assigning number of nodes to spawn simultaneous processes (parallel); default is 10.
   -r int, --str_rep int
                         Integer assigning the number of replicates for each k; default is 50.
