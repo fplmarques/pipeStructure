@@ -12,15 +12,16 @@
 $./pipeStructure.py [-h] -i file -k int [-o prefix] [-j int] [-r int] [--burnin int] [--numreps int]
 ```
 
-## Required arguments:
-
-**-h/--help**  Show this help message and exit.
-
+## Arguments:
+### Required
 **-i/--input**  Name of the structure input file (*.str, see below for details).
 - The script assumes that your input file for STRUCTURE includes population data.
 - Is you have only samples, you need to modify the script.
 
 **-k/--max_k**  Integer assigning the maximum number of K to be evaluated. \
+
+### Optional
+**-h/--help**  Show this help message and exit.
 
 **-o/--output_prefix** String that specifies the prefix for STRUCTURE output files. Uses input file name if not specified.
 
