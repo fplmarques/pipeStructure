@@ -14,7 +14,7 @@ $./pipeStructure.py [-h] -i file -k int [-o prefix] [-j int] [-r int] [--burnin 
 
 ## Required arguments:
 
-**-h/--help**  Show this help message and exit. /
+**-h/--help**  Show this help message and exit. \
 **-i/--input**  Name of the structure input file (*.str, see below for details)
 
   
