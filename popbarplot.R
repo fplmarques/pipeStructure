@@ -20,7 +20,7 @@ args <- commandArgs(trailingOnly = TRUE)
 
 # Check if the input argument is provided
 if(length(args) < 2 || args[1] != "-i") {
-  stop("Usage: Rscript plot_structure.R -i <input_file.csv>")
+  stop("Usage: Rscript popbarplot.R -i <input_file.csv>")
 }
 
 # Read the input file from command-line argument
