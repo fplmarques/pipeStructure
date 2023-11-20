@@ -1,0 +1,22 @@
+DATATYPE 0 
+INDFILE K1_indfile.txt
+POPFILE NOTNEEDED.popfile 
+OUTFILE K1-combined-merged.txt 
+MISCFILE K1-combined-miscfile.txt 
+K 1       # Number of clusters.
+C 22       # Number of individuals/populations.
+R 10    # Number of replicates/runs of Structure.
+M 2                 # Choice of algorithm (1 = FullSearch, 2 = Greedy, 3 = LargeKGreedy).
+W 0                 # Procedure for weighting by the number of individuals (1 = weight by number of individuals, 0 = weight each line equally). If DATATYPE = 0, this option is automatically set to 0.
+S 2                 # Choice of pairwise matrix similarity statistic (1 for G and 2 for G0).
+GREEDY_OPTION 2 
+REPEATS 200
+PERMUTATIONFILE NOTNEEDED.permutationfile 
+PRINT_PERMUTED_DATA 1 
+PERMUTED_DATAFILE K1-combined-aligned.txt 
+PRINT_EVERY_PERM 0 
+EVERY_PERMFILE K1-combined.every_permfile 
+PRINT_RANDOM_INPUTORDER 0 
+RANDOM_INPUTORDERFILE K1-combined.random_inputorderfile 
+OVERRIDE_WARNINGS 0 
+ORDER_BY_RUN 0 
