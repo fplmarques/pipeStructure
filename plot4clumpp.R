@@ -36,7 +36,7 @@ df <- read.table(input_file, header = FALSE, sep = "", fill = TRUE)  # Use the i
 k_value <- ncol(df) - 5	# 
 
 # Reorder the dataframe based on k_value
-order_columns <- paste("df$V", 6:(k_value + 1), sep = "")
+order_columns <- paste("df$V", 6:(k_value + 4), sep = "")
 order_command <- paste("df <- df[order(", paste(order_columns, collapse = ", "), "), ]")
 eval(parse(text = order_command))
 
