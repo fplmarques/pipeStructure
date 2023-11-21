@@ -150,7 +150,7 @@ ORDER_BY_RUN 0
   - K values for output files are based on examined values of K evaluated by STRUCTURE
   - All other settings can be changed as desired by the user by editing the script.
 
-### 2. Running [CLUMPP](https://rosenberglab.stanford.edu/clumpp.html)
+### 3. Running [CLUMPP](https://rosenberglab.stanford.edu/clumpp.html)
 ```bash
 $ CLUMPP K4_paramfile.txt
 ```
@@ -160,7 +160,11 @@ $ CLUMPP K4_paramfile.txt
   - K4-combined-miscfile.txt
 
 
-![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k2_barplot.png)
+### 4. Plotting CLUMPP's results with _plot4clumpp.R_
+
+
+
+![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k4_barplot.png)
 
 
 
