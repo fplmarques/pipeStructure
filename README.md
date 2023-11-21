@@ -47,12 +47,13 @@ $./pipeStructure.py [-h] -i file -k int [-o prefix] [-j int] [-r int] [--burnin 
 ```bash
 $./Rscript popbarplorR -i <input_file>
 ```
- 
-# preCLUMPP
-- _preCLUMPP.py_ parses [STRUCTURE](https://web.stanford.edu/group/pritchardlab/structure.html) *_f files and compile indfile and paramfile for CLUMP.
-
-
 - The script will output a file in SVG format.
+
+# preCLUMPP
+- _preCLUMPP.py_ parses [STRUCTURE](https://web.stanford.edu/group/pritchardlab/structure.html) ***_f** [files](https://rosenberglab.stanford.edu/software/CLUMPP_Manual.pdf)
+   and compile [indfile](https://rosenberglab.stanford.edu/software/CLUMPP_Manual.pdf) and paramfile for [CLUMP](https://rosenberglab.stanford.edu/clumpp.html).
+
+
 
 ## Example of plot:
 
