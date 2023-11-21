@@ -113,6 +113,39 @@ $./preCLUMPP.py
  22       47   (48)   14 :  0.063 0.042 0.000 0.895  
 ```
 </pre>
+
+  - it should have as many blocks of Q-matrices as the number of STRUCTURE replicates.
+
+- CLUMPP's paramfile will look like this:
+
+<pre>
+```
+DATATYPE 0  
+INDFILE K4_indfile.txt  
+POPFILE NOTNEEDED.popfile  
+OUTFILE K4-combined-merged.txt  
+MISCFILE K4-combined-miscfile.txt  
+K 4  
+C 22  
+R 10  
+M 2  
+W 0  
+S 2  
+GREEDY_OPTION 2  
+REPEATS 200 
+PERMUTATIONFILE NOTNEEDED.permutationfile  
+PRINT_PERMUTED_DATA 1  
+PERMUTED_DATAFILE K4-combined-aligned.txt  
+PRINT_EVERY_PERM 0  
+EVERY_PERMFILE K4-combined.every_permfile  
+PRINT_RANDOM_INPUTORDER 0  
+RANDOM_INPUTORDERFILE K4-combined.random_inputorderfile  
+OVERRIDE_WARNINGS 0  
+ORDER_BY_RUN 0  
+```
+</pre>
+
+
 ![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k2_barplot.png)
 
 
