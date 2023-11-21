@@ -85,6 +85,7 @@ $./preCLUMPP.py
   - K*_indfile.txt
 - CLUMPP's indfile have the following structure:
 
+<pre>
 ```
   1        2   (56)    2 :  0.543 0.060 0.187 0.211  
   2       10    (7)    3 :  0.002 0.997 0.000 0.000  
@@ -111,6 +112,7 @@ $./preCLUMPP.py
  21       45   (81)    5 :  0.018 0.002 0.089 0.891  
  22       47   (48)   14 :  0.063 0.042 0.000 0.895  
 ```
+</pre>
 ![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k2_barplot.png)
 
 
