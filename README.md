@@ -144,6 +144,9 @@ OVERRIDE_WARNINGS 0
 ORDER_BY_RUN 0  
 ```
 </pre>
+  - Values for K, C, and R are assigned by the script based on parsed files.
+  - K values for output files are based on examined values of K evaluated by STRUCTURE
+  - all other settings can be changed as desired by the user by editing the script.
 
 
 ![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k2_barplot.png)
