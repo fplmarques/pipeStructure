@@ -144,9 +144,20 @@ OVERRIDE_WARNINGS 0
 ORDER_BY_RUN 0  
 ```
 </pre>
+
+- **Comments:**
   - Values for K, C, and R are assigned by the script based on parsed files.
   - K values for output files are based on examined values of K evaluated by STRUCTURE
-  - all other settings can be changed as desired by the user by editing the script.
+  - All other settings can be changed as desired by the user by editing the script.
+
+### 2. Running [CLUMPP](https://rosenberglab.stanford.edu/clumpp.html)
+```bash
+$ CLUMPP K4_paramfile.txt
+```
+- This command will generate the following files (check [CLUMPP documentation](https://rosenberglab.stanford.edu/software/CLUMPP_Manual.pdf) for details):
+  - K4-combined-aligned.txt
+  - K4-combined-merged.txt
+  - K4-combined-miscfile.txt
 
 
 ![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k2_barplot.png)
