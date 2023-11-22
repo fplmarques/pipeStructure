@@ -166,10 +166,11 @@ been aligned according to the permutation with the greatest H-value. This is the
 
 ### 4. Plotting CLUMPP's results with _plot4clumpp.R_
 
-- The script _plot4clumpp.R_ generates stacked assignment barplots.
-- **Usage**
-
-  
+- Without any optional arguments, _plot4clumpp.R_ will require the following command line (as an example):
+```bash
+$ Rscript ./plot4clumpp.R -i K4-combined-merged.txt
+```
+- This will generate the file _k4_barplot.svg_ below in which the stacked assignment barplots are ordered by membership coefficients of Cluster 1, Cluster 2, and Cluster 2 (_i.e.,_ from Cluster 1 to Cluster k-1)
 
 ![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k4_barplot.png)
 
