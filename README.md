@@ -22,17 +22,17 @@ $./pipeStructure.py [-h] -i file -k int [-o prefix] [-j int] [-r int] [--burnin 
 **-k/--max_k**  Integer assigning the maximum number of K to be evaluated.
 
 ### Optional
-**-h/--help**  Show this help message and exit.
+**-h/--help** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show this help message and exit.
 
-**-o/--output_prefix** String that specifies the prefix for STRUCTURE output files. Uses input file name if not specified.
+**-o/--output_prefix** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String that specifies the prefix for STRUCTURE output files. Uses input file name if not specified.
 
-**-j/--n_jobs int**  Integer assigning the number of nodes to spawn simultaneous processes (parallel); default is 10.
+**-j/--n_jobs int** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Integer assigning the number of nodes to spawn simultaneous processes (parallel); default is 10.
 
-**-r/--str_rep** Integer assigning the number of replicates for each k; default is 50.
+**-r/--str_rep** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Integer assigning the number of replicates for each k; default is 50.
 
-**--burnin**  Integer specifying the length of the burnin period before the start of data collection by STRUCTURE; default is 50000.
+**--burnin** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Integer specifying the length of the burnin period before the start of data collection by STRUCTURE; default is 50000.
 
-**--numreps** Interger specifying the number of MCMC reps after burnin by STRUCTURE; default is 25000.
+**--numreps** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Interger specifying the number of MCMC reps after burnin by STRUCTURE; default is 25000.
 
 
 ## preCLUMPP
@@ -53,12 +53,12 @@ $./Rscript plot4clumpp.R -i <input_file.csv> [-o <order_file.txt>] [-t <translat
 ```
 ### Arguments:
 #### Required
-**-i** String specifying the input file, which is the output file from [CLUMP](https://rosenberglab.stanford.edu/clumpp.html) containing individual Q-matrix (_e.g.,_ _K*-combined-merged.txt_ )
+**-i** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String specifying the input file, which is the output file from [CLUMP](https://rosenberglab.stanford.edu/clumpp.html) containing individual Q-matrix (_e.g.,_ _K*-combined-merged.txt_ )
 
 #### Opitional
 **-o** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String specifying a text file containing in each line the sample name in the order the user expects the stacked assignment barplots to follow (see example below).
 
-**-t** String specifying a table separated file (*.tsv) containing two columns. Each row should have the name of the sample separated by a TAB from the name you want to be used in the translation (see example below).
+**-t** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String specifying a table separated file (*.tsv) containing two columns. Each row should have the name of the sample separated by a TAB from the name you want to be used in the translation (see example below).
 
 ---
 
