@@ -15,11 +15,11 @@ $./pipeStructure.py [-h] -i file -k int [-o prefix] [-j int] [-r int] [--burnin 
 
 ### Arguments:
 #### Required
-**-i/--input**  Name of the structure input file (*.str, see below for details).
+**-i/--input** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name of the structure input file (*.str, see below for details).
 - The script assumes that your input file for STRUCTURE includes population data.
 - Is you have only samples, you need to modify the script.
 
-**-k/--max_k**  Integer assigning the maximum number of K to be evaluated.
+**-k/--max_k** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Integer assigning the maximum number of K to be evaluated.
 
 ### Optional
 **-h/--help** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Show this help message and exit.
@@ -183,7 +183,7 @@ $ Rscript ./plot4clumpp.R -i K4-combined-merged.txt -o ordered_samples.txt
 - This will generate the following graph:
  ![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k4_barplot_ordered.png) 
 
-- Finally, you can modify the sample named by:
+- Finally, you can modify the sample names by:
     1. Creating a tab-separated file (*.tsv) with 2 columns in which each row has the sample name and the desired substation, as the file _./test_files/translate_samples.tsv_.
     2. Running _plot4clumpp.R_ with the argument **-i**:
 ```bash
