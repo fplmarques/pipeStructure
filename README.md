@@ -175,11 +175,33 @@ $ Rscript ./plot4clumpp.R -i K4-combined-merged.txt
 ![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k4_barplot.png)
 
 - You can define the order in which stacked assignment barplots should be plotted by:
-    1. Creating a text file with the order desired, as the file _test_files/ordered_samples.txt_:
+    1. Creating a text file with the order desired, as the file _./test_files/ordered_samples.txt_:
     2. Running _plot4clumpp.R_ with the argument **-o**:
 ```bash
 $ Rscript ./plot4clumpp.R -i K4-combined-merged.txt -o ordered_samples.txt
 ``` 
 - This will generate the following graph:
  ![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k4_barplot_ordered.png) 
+
+- Finally, you can modify the sample named by:
+    1. Creating a tab-separated file (*.tsv) with 2 columns in which each row has the sample name and the desired substation, as the file _./test_files/translate_samples.tsv_.
+    2. Running _plot4clumpp.R_ with the argument **-i**:
+```bash
+$ Rscript ./plot4clumpp.R -i K4-combined-merged.txt -o ordered_samples.txt -t translate_samples.tsv
+``` 
+- This will generate the following graph:
+ ![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k4_barplot_ordered_transl.png) 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
