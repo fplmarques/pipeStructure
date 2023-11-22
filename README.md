@@ -158,11 +158,14 @@ $ CLUMPP K4_paramfile.txt
   - K4-combined-aligned.txt
   - K4-combined-merged.txt
   - K4-combined-miscfile.txt
-
+- The file _K4-combined-merged.txt_ contains the individual Q-matrix computed as the mean overall individual Q-matrices after the columns have
+been aligned according to the permutation with the greatest H-value. This is the file that will be used to create stacked assignment barplots.
 
 ### 4. Plotting CLUMPP's results with _plot4clumpp.R_
 
+- The script _plot4clumpp.R_ genetares stacked assignment barplots.
 
+  
 
 ![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k4_barplot.png)
 
