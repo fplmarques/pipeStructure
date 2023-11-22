@@ -180,5 +180,6 @@ $ Rscript ./plot4clumpp.R -i K4-combined-merged.txt
 ```bash
 $ Rscript ./plot4clumpp.R -i K4-combined-merged.txt -o ordered_samples.txt
 ``` 
-
+- This will generate the following graph:
+ ![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k4_barplot_ordered.png) 
 
