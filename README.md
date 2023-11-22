@@ -56,7 +56,7 @@ $./Rscript plot4clumpp.R -i <input_file.csv> [-o <order_file.txt>] [-t <translat
 **-i** String specifying the input file, which is the output file from [CLUMP](https://rosenberglab.stanford.edu/clumpp.html) containing individual Q-matrix (_e.g.,_ _K*-combined-merged.txt_ )
 
 #### Opitional
-**-o**;&nbsp;&nbsp; String specifying a text file containing in each line the sample name in the order the user expects the stacked assignment barplots to follow (see example below).
+**-o**;&nbsp;&nbsp;String specifying a text file containing in each line the sample name in the order the user expects the stacked assignment barplots to follow (see example below).
 
 **-t** String specifying a table separated file (*.tsv) containing two columns. Each row should have the name of the sample separated by a TAB from the name you want to be used in the translation (see example below).
 
