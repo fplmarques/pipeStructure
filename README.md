@@ -17,7 +17,7 @@ $./pipeStructure.py [-h] -i file -k int [-o prefix] [-j int] [-r int] [--burnin 
 #### Required
 **-i/--input** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Name of the structure input file (*.str, see below for details).
 - The script assumes that your input file for STRUCTURE includes population data.
-- Is you have only samples, you need to modify the script.
+- If you have samples only, you need to modify the script.
 
 **-k/--max_k** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Integer assigning the maximum number of K to be evaluated.
 
@@ -32,7 +32,7 @@ $./pipeStructure.py [-h] -i file -k int [-o prefix] [-j int] [-r int] [--burnin 
 
 **--burnin** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Integer specifying the length of the burnin period before the start of data collection by STRUCTURE; default is 50000.
 
-**--numreps** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Interger specifying the number of MCMC reps after burnin by STRUCTURE; default is 25000.
+**--numreps** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Integer specifying the number of MCMC reps after burnin by STRUCTURE; default is 25000.
 
 
 ## preCLUMPP
@@ -86,7 +86,7 @@ $./preCLUMPP.py
 - For the test files above, the script will generate the following files for K ranging from 1 to 4:
   - K*_paramfile.txt
   - K*_indfile.txt
-- CLUMPP's indfile have the following structure:
+- CLUMPP's indfile has the following structure:
 
 <pre>
 ```
@@ -191,17 +191,3 @@ $ Rscript ./plot4clumpp.R -i K4-combined-merged.txt -o ordered_samples.txt -t tr
 ``` 
 - This will generate the following graph:
  ![example](https://github.com/fplmarques/pipeStructure/blob/main/test_files/k4_barplot_ordered_transl.png) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
