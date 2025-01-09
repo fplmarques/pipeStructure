@@ -1,0 +1,44 @@
+name: Convert README
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Install pandoc
+      run: sudo apt-get install -y pandoc texlive-xetex
+
+    - name: Convert README to PDF and DOCX
+      run: |
+        mkdir -p doc
+        pandoc README.md -o doc/README.pdf
+        pandoc README.md -o doc/README.docx
+
+    - name: Set File Permissions
+      run: chmod 644 doc/README.pdf doc/README.docx
+
+    - name: Debug Git State
+      run: git status
+
+    - name: Commit and Push Converted Files
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add doc/README.pdf doc/README.docx
+        if ! git diff --cached --quiet; then
+          git commit -m "Add converted README files (PDF and DOCX)"
+          git push
+        else
+          echo "No changes to commit."
+        fi
