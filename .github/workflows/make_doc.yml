@@ -24,3 +24,13 @@ jobs:
         run: |
           pandoc README.md -o doc/README.pdf
           pandoc README.md -o doc/README.docx
+
+      - name: Commit Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add doc/README.pdf doc/README.docx
+          git commit -m "Add converted README files"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
