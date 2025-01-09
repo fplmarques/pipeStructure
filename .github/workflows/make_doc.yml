@@ -5,40 +5,21 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write
-
 jobs:
   convert:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    - name: Install pandoc
-      run: sudo apt-get install -y pandoc texlive-xetex
+      - name: Install LaTeX
+        run: sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
-    - name: Convert README to PDF and DOCX
-      run: |
-        mkdir -p doc
-        pandoc README.md -o doc/README.pdf
-        pandoc README.md -o doc/README.docx
+      - name: Ignore Invalid Images
+        run: echo "function Image(el) return pandoc.Str('[Image]') end" > ignore-images.lua
 
-    - name: Set File Permissions
-      run: chmod 644 doc/README.pdf doc/README.docx
-
-    - name: Debug Git State
-      run: git status
-
-    - name: Commit and Push Converted Files
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git add doc/README.pdf doc/README.docx
-        if ! git diff --cached --quiet; then
-          git commit -m "Add converted README files (PDF and DOCX)"
-          git push
-        else
-          echo "No changes to commit."
-        fi
+      - name: Convert README to PDF and DOCX
+        run: |
+          mkdir -p doc
+          pandoc README.md -o doc/README.pdf --lua-filter=ignore-images.lua
+          pandoc README.md -o doc/README.docx
