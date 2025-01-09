@@ -12,14 +12,15 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Install LaTeX
-        run: sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+      - name: Install Pandoc and LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
-      - name: Ignore Invalid Images
-        run: echo "function Image(el) return pandoc.Str('[Image]') end" > ignore-images.lua
+      - name: Create Documentation Directory
+        run: mkdir -p doc
 
       - name: Convert README to PDF and DOCX
         run: |
-          mkdir -p doc
-          pandoc README.md -o doc/README.pdf --lua-filter=ignore-images.lua
+          pandoc README.md -o doc/README.pdf
           pandoc README.md -o doc/README.docx
